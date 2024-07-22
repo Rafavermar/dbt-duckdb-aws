@@ -1,0 +1,52 @@
+version: 2
+
+models:
+  - name: dim_stations
+    description: "Dimensión que detalla las estaciones de Citi Bike, incluyendo ubicaciones."
+    columns:
+      - name: station_id
+        description: "Identificador único de la estación de Citi Bike."
+        tests:
+          - unique
+          - not_null
+      - name: station_name
+        description: "Nombre de la estación de Citi Bike."
+        tests:
+          - not_null
+      - name: latitude
+        description: "Latitud geográfica de la estación."
+      - name: longitude
+        description: "Longitud geográfica de la estación."
+
+  - name: fact_bike_trips
+    description: "Tabla de hechos que registra los viajes de Citi Bike, incluyendo métricas clave."
+    columns:
+      - name: ride_id
+        description: "Identificador único del viaje."
+        tests:
+          - unique
+          - not_null
+      - name: start_date_id
+        description: "Fecha de inicio del viaje, referencia a dim_date."
+        tests:
+          - not_null
+      - name: end_date_id
+        description: "Fecha de fin del viaje, referencia a dim_date."
+        tests:
+          - not_null
+      - name: start_station_id
+        description: "Identificador de la estación de inicio del viaje, referencia a dim_stations."
+        tests:
+          - not_null
+      - name: end_station_id
+        description: "Identificador de la estación de fin del viaje, referencia a dim_stations."
+        tests:
+          - not_null
+      - name: duration_minutes
+        description: "Duración del viaje en minutos."
+        tests:
+          - not_null
+      - name: rider_type
+        description: "Tipo de usuario del servicio, miembro o casual."
+        tests:
+          - not_null

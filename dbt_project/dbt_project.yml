@@ -1,0 +1,28 @@
+name: 'biketrip'
+version: '1.0.0'
+
+profile: 'biketrip'
+
+model-paths: ["biketrip/models"]
+analysis-paths: ["biketrip/analyses"]
+test-paths: ["biketrip/tests"]
+seed-paths: ["biketrip/seeds"]
+macro-paths: ["biketrip/macros"]
+snapshot-paths: ["biketrip/snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  biketrip:
+    01.staging:
+      +materialized: table
+    02.cleaned:
+      +materialized: view
+    03.enriched:
+      +materialized: view
+    04.structural:
+      +materialized: view
+    05.datamart:
+      +materialized: table
