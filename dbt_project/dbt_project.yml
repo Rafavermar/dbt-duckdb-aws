@@ -26,3 +26,7 @@ models:
       +materialized: view
     05.datamart:
       +materialized: table
+
+vars:
+  'dbt_date':
+    'time_zone': 'Europe/Madrid'
