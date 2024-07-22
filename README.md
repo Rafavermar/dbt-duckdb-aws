@@ -43,6 +43,7 @@ dbtlab/
 - Docker
 - Un bucket de AWS S3 con archivos CSV de datos de viajes en bicicleta
 - Credenciales de AWS (Access Key ID y Secret Access Key)
+- Fuente original de los [datos](https://s3.amazonaws.com/tripdata/index.html)
 
 ## Instrucciones
 1. Construir la Imagen Docker
