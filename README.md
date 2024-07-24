@@ -137,7 +137,7 @@ SHOW TABLES;
 SELECT * FROM main.dim_date LIMIT 10;
 SELECT * FROM main.dim_stations LIMIT 10;
 ```
-## Pruebas (Tests) con DBT
+## Pruebas (Tests) con DBT (RAMA DEVELOP)
    Para implementar y ejecutar pruebas en DBT, seguimos los siguientes pasos:
    
 1. **Definir Pruebas en schema.yml:**
@@ -182,7 +182,7 @@ dbt deps
 ```
 dbt test
 ```
-## Uso de Streamlit para Visualización
+## Uso de Streamlit para Visualización (RAMA DEVELOP)
 
 1. **Instalar Streamlit y Matplotlib:**
 
